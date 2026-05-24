@@ -1,0 +1,10 @@
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\bin\Debug\LAB05.exe.config
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\bin\Debug\LAB05.exe
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\bin\Debug\LAB05.pdb
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.csproj.AssemblyReference.cache
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.Form1.resources
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.Properties.Resources.resources
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.csproj.GenerateResource.cache
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.csproj.CoreCompileInputs.cache
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.exe
+D:\TEST_ONE\VT_LABS\LAB05\LAB05\obj\Debug\LAB05.pdb
