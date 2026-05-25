@@ -5,8 +5,8 @@ namespace LAB02
     /// <summary>
     /// Класс Solver содержит решения задач лабораторной работы.
     /// Методы сгруппированы по блокам.
-    /// Ф.И.О - 
-    /// Вариант - 
+    /// Ф.И.О - Мармыш Дарья Вячеславовна
+    /// Вариант - 2
     /// </summary>
     public class Solver
     {
@@ -41,8 +41,10 @@ namespace LAB02
         /// </example>
         public static string CalculateBMI(double heightCm, double weightKg)
         {
-            // Реализовать метод для решения задачи
-            throw new NotImplementedException();
+            double heightM = heightCm / 100;
+            double bmi = weightKg / (heightM * heightM);
+            double roundedBMI = Math.Round(bmi, 1);
+            return $"Рост: {heightCm} см, Вес: {weightKg} кг, ИМТ = {roundedBMI}";
         }
 
         /// <summary>
@@ -139,8 +141,20 @@ namespace LAB02
         /// </example>
         public static string GetTriangleType(double a, double b, double c)
         {
-            // Реализовать метод для решения задачи
-            throw new NotImplementedException();
+            if (a + b <= c || a + c <= b || b + c <= a || a <= 0 || b <= 0 || c <= 0)
+            {
+                return $"Треугольник со сторонами {a}, {b}, {c} – не существует";
+            }
+
+            if (a == b && b == c)
+            {
+                return $"Треугольник со сторонами {a}, {b}, {c} – равносторонний";
+            }
+            if (a == b || a == c || b == c)
+            {
+                return $"Треугольник со сторонами {a}, {b}, {c} – равнобедренный";
+            }
+            return $"Треугольник со сторонами {a}, {b}, {c} – разносторонний";
         }
 
         /// <summary>
@@ -236,8 +250,15 @@ namespace LAB02
         /// </example>
         public static string ReverseNumber(int number)
         {
-            // Реализовать метод для решения задачи
-            throw new NotImplementedException();
+            int original = number;
+            int reversed = 0;
+            while (number != 0)
+            {
+                int digit = number % 10;
+                reversed = reversed * 10 + digit;
+                number /= 10;
+            }
+            return $"Перевёрнутое число: {reversed}";
         }
 
         /// <summary>
@@ -338,8 +359,40 @@ namespace LAB02
         /// </example>
         public static string SecondLargest(int[] array)
         {
-            // Реализовать метод для решения задачи
-            throw new NotImplementedException();
+            if (array.Length < 2)
+            {
+                return "В массиве должно находиться минимум 2 элемента";
+            }
+
+            int firstMax = int.MinValue;
+            int secondMax = int.MinValue;
+            int index = -1;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > firstMax)
+                {
+                    secondMax = firstMax;
+                    firstMax = array[i];
+                }
+                else if (array[i] > secondMax && array[i] != firstMax)
+                {
+                    secondMax = array[i];
+                    index = i;
+                }
+            }
+
+            // Поиск индекса второго максимального
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == secondMax)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            return $"Второй по величине элемент: {secondMax} (индекс {index})";
         }
 
         /// <summary>
